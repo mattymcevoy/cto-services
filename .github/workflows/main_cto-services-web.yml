@@ -6,6 +6,11 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  
+permissions:
+  id-token: write
+  contents: read
+
 
 jobs:
   build-and-deploy:
@@ -38,11 +43,19 @@ jobs:
           cd .next/standalone
           zip -r ../../app.zip .
 
+      - name: Azure Login (OIDC)
+        uses: azure/login@v2
+        with:
+            client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8DB8670FE295400D9FAD324409F4AE65 }}
+            tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D30CD24542B347E084BB599829754391 }}
+            subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0E6BD1186A2D44F6900F59FD28E71335 }}   
+            
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: cto-services-web
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: app.zip
+
 
 
