@@ -52,6 +52,12 @@ jobs:
           if [ -z "$CID" ]; then echo "CLIENT_ID is MISSING"; else echo "CLIENT_ID is SET"; fi
           if [ -z "$TID" ]; then echo "TENANT_ID is MISSING"; else echo "TENANT_ID is SET"; fi
           if [ -z "$SID" ]; then echo "SUBSCRIPTION_ID is MISSING"; else echo "SUBSCRIPTION_ID is SET"; fi
+      
+      - name: Debug OIDC inputs (safe)
+        run: |
+          echo "CID length: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8DB8670FE295400D9FAD324409F4AE65 != '' }}"
+          echo "TID length: ${{ secrets.AZUREAPPSERVICE_TENANTID_D30CD24542B347E084BB599829754391 != '' }}"
+          echo "SID length: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0E6BD1186A2D44F6900F59FD28E71335 != '' }}"
 
       - name: Azure Login (OIDC)
         uses: azure/login@v2
@@ -65,6 +71,7 @@ jobs:
         with:
           app-name: cto-services-web
           package: app.zip
+
 
 
 
