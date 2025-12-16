@@ -454,7 +454,8 @@ export default function CTOServicesLuxurySite() {
 
               <motion.div variants={fadeUp}
               <LuxuryCta />
-              </motion.div>
+              
+            </motion.div>
 
 
               <motion.div variants={fadeUp} className="mt-10 grid gap-4 sm:grid-cols-3">
