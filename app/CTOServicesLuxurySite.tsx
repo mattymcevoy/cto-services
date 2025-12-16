@@ -1,5 +1,6 @@
 "use client";
 
+
 import LuxuryCta from "@/components/LuxuryCta";
 import AvailabilityBand from "@/components/AvailabilityBand";
 import React, { useEffect, useMemo, useState } from "react";
@@ -20,6 +21,10 @@ import {
   Quote,
   ChevronDown,
 } from "lucide-react";
+
+const CALENDLY_URL =
+  "https://calendly.com/matt-mcevoy-ctoservices?hide_event_type_details=1&hide_gdpr_banner=1";
+
 
 // Luxury single-page site for CTO Services
 // Tailwind for styling + Framer Motion for subtle motion
@@ -394,11 +399,14 @@ export default function CTOServicesLuxurySite() {
 
           <div className="flex items-center gap-3">
             <a
-              href="#contact"
-              className="hidden rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/90 transition hover:bg-white/10 sm:inline-flex"
-            >
-              Book a confidential discussion
-            </a>
+  href={CALENDLY_URL}
+  target="_blank"
+  rel="noreferrer"
+  className="hidden rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/90 transition hover:bg-white/10 sm:inline-flex"
+>
+  Book a confidential discussion
+</a>
+
             <a
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition hover:opacity-90"
@@ -670,11 +678,14 @@ export default function CTOServicesLuxurySite() {
               </div>
               <div className="lg:col-span-4">
                 <a
-                  href="#contact"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:opacity-90"
-                >
-                  Book a call <Calendar className="h-4 w-4" />
-                </a>
+ href={CALENDLY_URL}
+  target="_blank"
+  rel="noreferrer"
+  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:opacity-90"
+>
+  Book a call <Calendar className="h-4 w-4" />
+</a>
+
                 <div className="mt-3 text-center text-xs uppercase tracking-[0.26em] text-white/45">
                   Confidential • Professional • Outcome-led
                 </div>
@@ -1099,21 +1110,21 @@ export default function CTOServicesLuxurySite() {
                   </a>
 
                   <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      alert("Replace this with your Calendly / booking link.");
-                    }}
+                    href={CALENDLY_URL}
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center justify-between rounded-xl bg-white px-4 py-3 text-sm font-semibold text-black transition hover:opacity-90"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <Calendar className="h-4 w-4" /> Book a time
-                    </span>
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
+                       <Calendar className="h-4 w-4" /> Book a time
+                     </span>
+                     <ArrowRight className="h-4 w-4" />
+                    </a>
+
+
 
                   <a
-                    href="tel:+440000000000"
+                    href="tel:+447967656987"
                     className="inline-flex items-center justify-between rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white/85 transition hover:bg-white/10"
                   >
                     <span className="inline-flex items-center gap-2">
@@ -1167,11 +1178,14 @@ export default function CTOServicesLuxurySite() {
       <div className="fixed bottom-4 left-0 right-0 z-50 sm:hidden">
         <Container>
           <a
-            href="#contact"
-            className="flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-black shadow-lg"
-          >
-            Book a confidential discussion <ArrowRight className="h-4 w-4" />
-          </a>
+ href={CALENDLY_URL}
+  target="_blank"
+  rel="noreferrer"
+  className="flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-black shadow-lg"
+>
+  Book a confidential discussion <ArrowRight className="h-4 w-4" />
+</a>
+
         </Container>
       </div>
     </div>
