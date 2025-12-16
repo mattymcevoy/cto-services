@@ -1,6 +1,7 @@
 "use client";
-"use client";
 
+import LuxuryCta from "@/components/LuxuryCta";
+import AvailabilityBand from "@/components/AvailabilityBand";
 import React, { useEffect, useMemo, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
@@ -451,20 +452,10 @@ export default function CTOServicesLuxurySite() {
                 outcomes, discreet leadership, and a luxury-calibre client experience.
               </motion.p>
 
-              <motion.div variants={fadeUp} className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:opacity-90"
-                >
-                  Book a confidential discussion <ArrowRight className="h-4 w-4" />
-                </a>
-                <a
-                  href="#how"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10"
-                >
-                  See how it works <ChevronDown className="h-4 w-4" />
-                </a>
+              <motion.div variants={fadeUp} <motion.div variants={fadeUp}>
+              <LuxuryCta />
               </motion.div>
+
 
               <motion.div variants={fadeUp} className="mt-10 grid gap-4 sm:grid-cols-3">
                 {[
