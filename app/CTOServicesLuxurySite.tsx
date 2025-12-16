@@ -547,6 +547,7 @@ export default function CTOServicesLuxurySite() {
           </div>
         </Container>
       </section>
+      <AvailabilityBand />
 
       {/* SERVICES */}
       <section id="services" className="border-t border-white/10">
