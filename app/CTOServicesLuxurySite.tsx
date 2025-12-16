@@ -452,7 +452,7 @@ export default function CTOServicesLuxurySite() {
                 outcomes, discreet leadership, and a luxury-calibre client experience.
               </motion.p>
 
-              <motion.div variants={fadeUp} <motion.div variants={fadeUp}>
+              <motion.div variants={fadeUp}
               <LuxuryCta />
               </motion.div>
 
