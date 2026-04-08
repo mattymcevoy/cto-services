@@ -16,7 +16,7 @@ export type Insight = InsightMeta & {
   contentHtml: string;
 };
 
-const insightsDirectory = path.join(process.cwd(), "content", "insights");
+const insightsDirectory = path.join(process.cwd(), "content/insights");
 
 export function getSortedInsights(): InsightMeta[] {
   const fileNames = fs.readdirSync(insightsDirectory);
