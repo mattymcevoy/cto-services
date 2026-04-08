@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.561.0",
     "next": "16.0.10",
