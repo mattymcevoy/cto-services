@@ -1,5 +1,5 @@
 ---
-title: "The Definitive 2028+ Strategy: Quantum-Ready Autonomous Orchestration"
+title: "The Definitive 2028-2030 Strategy: Quantum-Ready Autonomous Orchestration"
 date: "2026-01-04"
 excerpt: "..."
 author: "Matt McEvoy"
