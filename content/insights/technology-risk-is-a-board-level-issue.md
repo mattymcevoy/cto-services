@@ -1,6 +1,6 @@
 ---
 title: "Technology Risk Is a Board-Level Issue, Not Just an IT Issue"
-date: "2026-04-09"
+date: "2026-02-18"
 excerpt: "Cyber, resilience, suppliers, data, and delivery risk are now board-level concerns. Treating them as operational IT matters is a governance error."
 author: "Matt McEvoy"
 ---
