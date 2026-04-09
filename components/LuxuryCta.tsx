@@ -1,4 +1,10 @@
-export default function LuxuryCta() {
+type LuxuryCtaProps = {
+  enquiryHref?: string;
+};
+
+export default function LuxuryCta({
+  enquiryHref = "#contact",
+}: LuxuryCtaProps) {
   return (
     <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
       <a
@@ -11,7 +17,7 @@ export default function LuxuryCta() {
       </a>
 
       <a
-        href="#contact"
+        href={enquiryHref}
         className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 backdrop-blur transition hover:bg-white/10"
       >
         Send a confidential enquiry
@@ -23,4 +29,3 @@ export default function LuxuryCta() {
     </div>
   );
 }
-
