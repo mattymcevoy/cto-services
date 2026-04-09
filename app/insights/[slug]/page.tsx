@@ -79,7 +79,7 @@ export default async function InsightArticlePage({ params }: Props) {
             Book a confidential consultation or send a direct enquiry.
           </p>
 
-          <LuxuryCta />
+          <LuxuryCta enquiryHref="/#contact" />
         </div>
       </article>
     </main>
